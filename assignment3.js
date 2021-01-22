@@ -6,8 +6,9 @@ function kilometerToMeter(kilometer){
 
 
 // budgetCalculator
-function budgetCalculator(){
-
+function budgetCalculator(watch,mobile,laptop){
+    var result = (watch * 50) +(mobile * 100) + (laptop * 500);
+    return result;
 }
 
 
@@ -47,3 +48,4 @@ function megaFriend(names){
     }
     return largestName;
 }
+
