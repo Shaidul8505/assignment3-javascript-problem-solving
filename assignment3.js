@@ -13,8 +13,25 @@ function budgetCalculator(){
 
 
 // hotelCost
-function hotelCost(){
-
+function hotelCost(stayingDays){
+    var cost = 0;
+    if(stayingDays <= 10){
+        cost = stayingDays * 100;
+    }
+    else if(stayingDays <= 20){
+        var firstPart = 10 * 100;
+        var remaining = stayingDays - 10;
+        var secondPart = remaining * 80;
+        cost = firstPart + secondPart;
+    }
+    else{
+        var firstPart = 10 * 100;
+        var secondPart = 10 * 80;
+        var remaining = stayingDays - 20;
+        var thirdPart = remaining * 50;
+        cost = firstPart + secondPart + thirdPart;
+    }
+    return cost
 }
 
 
